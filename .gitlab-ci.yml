@@ -1,0 +1,9 @@
+stages:
+  - build
+
+job_build:
+  stage: build
+  script:
+    - echo 'build'
+    - mvn verify
+    - sudo cp target/DockerTest-0.jar /opt/gitlab-builds/DockerTest.jar
